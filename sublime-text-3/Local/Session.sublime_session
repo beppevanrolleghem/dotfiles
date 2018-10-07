@@ -1,0 +1,545 @@
+{
+	"folder_history":
+	[
+		"/home/beppe/github/beppe.app",
+		"/home/beppe/github/3dslove",
+		"/home/beppe/github/3ag",
+		"/home/beppe/github"
+	],
+	"last_version": 3176,
+	"last_window_id": 5,
+	"log_indexing": false,
+	"settings":
+	{
+		"new_window_height": 1027.0,
+		"new_window_settings":
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"recta",
+						"love.graphics.rectangle"
+					],
+					[
+						"rect",
+						"love.graphics.rectangle"
+					]
+				]
+			},
+			"build_system_choices":
+			[
+				[
+					[
+						[
+							"Packages/Lua/Lua.sublime-build",
+							""
+						],
+						[
+							"Packages/SublimeLove/Love.sublime-build",
+							""
+						]
+					],
+					[
+						"Packages/Lua/Lua.sublime-build",
+						""
+					]
+				]
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+					[
+						"settings",
+						"Preferences: Settings"
+					],
+					[
+						"enable",
+						"Package Control: Enable Package"
+					],
+					[
+						"installp",
+						"Package Control: Install Package"
+					],
+					[
+						"setsyllo",
+						"Set Syntax: Lua (Love)"
+					],
+					[
+						"love",
+						"Set Syntax: Lua (Love)"
+					],
+					[
+						"install",
+						"Package Control: Install Package"
+					],
+					[
+						"disable",
+						"Package Control: Disable Package"
+					],
+					[
+						"sshand",
+						"Set Syntax: Handlebars"
+					],
+					[
+						"insta",
+						"Package Control: Install Package"
+					],
+					[
+						"install p",
+						"Install Package Control"
+					]
+				],
+				"width": 0.0
+			},
+			"console":
+			{
+				"height": 0.0,
+				"history":
+				[
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/home/beppe/github/3dslove/ui.lua",
+				"/home/beppe/github/3dslove/gamemanager.lua",
+				"/home/beppe/github/3dslove/swat.lua",
+				"/home/beppe/github/3dslove/snake.lua",
+				"/home/beppe/github/3dslove/main.lua",
+				"/home/beppe/github/3dslove/readme.md",
+				"/home/beppe/Downloads/game/main.lua",
+				"/home/beppe/github/3ag/readme.md",
+				"/home/beppe/github/3ag/snake/main.lua",
+				"/home/beppe/github/beppe.app/public/css/index.css",
+				"/home/beppe/github/beppe.app/public/js/index.js",
+				"/home/beppe/github/beppe.app/index.js",
+				"/home/beppe/github/beppe.app/views/index.handlebars",
+				"/home/beppe/github/beppe.app/views/layouts/main.handlebars",
+				"/home/beppe/github/beppe.app/posts/racisme.md",
+				"/home/beppe/github/beppe.app/posts/temp.md",
+				"/home/beppe/github/beppe.app/LocalIndex.js"
+			],
+			"find":
+			{
+				"height": 26.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					"print",
+					"score",
+					"anim",
+					"tetris",
+					"hgrid",
+					"beep"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"incremental_find":
+			{
+				"height": 26.0
+			},
+			"input":
+			{
+				"height": 38.0
+			},
+			"menu_visible": true,
+			"output.exec":
+			{
+				"height": 120.0
+			},
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"pinned_build_system": "Packages/SublimeLove/Love.sublime-build",
+			"replace":
+			{
+				"height": 48.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"show_minimap": true,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 244.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			}
+		},
+		"new_window_width": 1894.0
+	},
+	"windows":
+	[
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"recta",
+						"love.graphics.rectangle"
+					],
+					[
+						"rect",
+						"love.graphics.rectangle"
+					]
+				]
+			},
+			"buffers":
+			[
+				{
+					"file": "/home/beppe/github/beppe.app/posts/ouder worden & veranderingen aan de site.md",
+					"settings":
+					{
+						"buffer_size": 5314,
+						"line_ending": "Unix"
+					}
+				}
+			],
+			"build_system": "",
+			"build_system_choices":
+			[
+				[
+					[
+						[
+							"Packages/Lua/Lua.sublime-build",
+							""
+						],
+						[
+							"Packages/SublimeLove/Love.sublime-build",
+							""
+						]
+					],
+					[
+						"Packages/Lua/Lua.sublime-build",
+						""
+					]
+				]
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+					[
+						"settings",
+						"Preferences: Settings"
+					],
+					[
+						"enable",
+						"Package Control: Enable Package"
+					],
+					[
+						"installp",
+						"Package Control: Install Package"
+					],
+					[
+						"setsyllo",
+						"Set Syntax: Lua (Love)"
+					],
+					[
+						"love",
+						"Set Syntax: Lua (Love)"
+					],
+					[
+						"install",
+						"Package Control: Install Package"
+					],
+					[
+						"disable",
+						"Package Control: Disable Package"
+					],
+					[
+						"sshand",
+						"Set Syntax: Handlebars"
+					],
+					[
+						"insta",
+						"Package Control: Install Package"
+					],
+					[
+						"install p",
+						"Install Package Control"
+					]
+				],
+				"width": 0.0
+			},
+			"console":
+			{
+				"height": 0.0,
+				"history":
+				[
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"expanded_folders":
+			[
+				"/home/beppe/github/beppe.app",
+				"/home/beppe/github/beppe.app/posts",
+				"/home/beppe/github/beppe.app/views"
+			],
+			"file_history":
+			[
+				"/home/beppe/github/beppe.app/index.js",
+				"/home/beppe/github/beppe.app/LocalIndex.js",
+				"/home/beppe/github/3dslove/ui.lua",
+				"/home/beppe/github/3dslove/gamemanager.lua",
+				"/home/beppe/github/3dslove/swat.lua",
+				"/home/beppe/github/3dslove/snake.lua",
+				"/home/beppe/github/3dslove/main.lua",
+				"/home/beppe/github/3dslove/readme.md",
+				"/home/beppe/Downloads/game/main.lua",
+				"/home/beppe/github/3ag/readme.md",
+				"/home/beppe/github/3ag/snake/main.lua",
+				"/home/beppe/github/beppe.app/public/css/index.css",
+				"/home/beppe/github/beppe.app/public/js/index.js",
+				"/home/beppe/github/beppe.app/views/index.handlebars",
+				"/home/beppe/github/beppe.app/views/layouts/main.handlebars",
+				"/home/beppe/github/beppe.app/posts/racisme.md",
+				"/home/beppe/github/beppe.app/posts/temp.md"
+			],
+			"find":
+			{
+				"height": 26.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"folders":
+			[
+				{
+					"path": "/home/beppe/github/beppe.app"
+				}
+			],
+			"groups":
+			[
+				{
+					"selected": 0,
+					"sheets":
+					[
+						{
+							"buffer": 0,
+							"file": "/home/beppe/github/beppe.app/posts/ouder worden & veranderingen aan de site.md",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 5314,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										5314,
+										5314
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+								},
+								"translation.x": 0.0,
+								"translation.y": 119.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 0,
+							"type": "text"
+						}
+					]
+				}
+			],
+			"incremental_find":
+			{
+				"height": 26.0
+			},
+			"input":
+			{
+				"height": 38.0
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			},
+			"menu_visible": true,
+			"output.exec":
+			{
+				"height": 120.0
+			},
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"pinned_build_system": "Packages/SublimeLove/Love.sublime-build",
+			"position": "0,0,0,0,0,12,12,1906,1039,1920,1080",
+			"project": "",
+			"replace":
+			{
+				"height": 48.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"selected_group": 0,
+			"settings":
+			{
+			},
+			"show_minimap": true,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 244.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			},
+			"window_id": 5,
+			"workspace_name": ""
+		}
+	],
+	"workspaces":
+	{
+		"recent_workspaces":
+		[
+			"/home/beppe/github/beppe.app/beppe.app.sublime-workspace"
+		]
+	}
+}
