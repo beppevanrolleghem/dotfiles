@@ -36,8 +36,8 @@ set $term2 urxvt
 
 
 #browser
-set $brow qutebrowser
-
+#set $brow qutebrowser
+set $brow google-chrome-unstable
 # Keys bindings for easy access
 set $bright XF86MonBrightnessUp
 set $dim XF86MonBrightnessDown
@@ -45,8 +45,9 @@ set $volUp XF86AudioRaiseVolume
 set $volDown XF86AudioLowerVolume
 set $mute XF86AudioMute
 
-
-
+#set $volUp "amixer -q sset Master 10%+" 
+#set $volDown "amixer -q sset Master 10%-" 
+#set $mute "amixer -q sset Master toggle"
 
 
 
@@ -61,23 +62,28 @@ bindsym $mod+Shift+q kill
 #bindsym $mod+d exec dmenu_run -nb black -nf white -sb white -sf black -fn RobotoMono:size=10
 
 #start rofi
-bindsym $mod+d exec rofi -show run -hide-scrollbar -lines 3 -eh 1 -width 40 -location 8 -xoffset 170 -yoffset 70 -padding 30 -disable-history -font "RobotoMono 18"
+#bindsym $mod+d exec rofi -show run -hide-scrollbar -lines 3 -eh 1 -width 40 -location 8 -xoffset 170 -yoffset 70 -padding 30 -disable-history -font "RobotoMono 18"
 
 
 #keybindings
 #laptop
-bindsym $bright exec xbacklight -inc 5
-bindsym $dim exec xbacklight -dec 5
-bindsym $mod+$dim exec xbacklight -set 1
-bindsym $mod+Shift+$dim exec xbacklight -set 0
+bindsym $mod+Shift+F5 exec xbacklight -dec 5
+bindsym $mod+Shift+F6 exec xbacklight -inc 5
+bindsym $dim exec xbacklight -set 1
+bindsym $mod+$dim exec xbacklight -set 0
+bindsym $bright exec xbacklight -set 70
 bindsym $mod+$bright exec xbacklight -set 100
-bindsym $mod+Shift+$bright exec xbacklight -set 70
-bindsym $mod+$volUp exec pulse sset Master 5%+
-bindsym $mod+$volDown exec pulse sset Master 5%-
+bindsym $mod+$volUp exec amixer -q sset Master 5%+ 
+bindsym $mod+Shift+F1 exec amixer -q sset Master toggle
+bindsym $mod+Shift+F2 exec amixer -q sset Master 5%-
+bindsym $mod+Shift+F3 exec amixer -q sset Master 5%+
+bindsym $mod+$volDown exec amixer -q sset master 5%- 
 
-bindsym $mod+Shift+$volUp exec pulse sset Master 100%
-bindsym $mod+Shift+$volDown exec pulse sset Master 5%
-bindsym $mod+$mute exec pulse sset Master 0%
+bindsym $mod+Shift+Home exec i3-msg restart
+#bindsym $mod+Shift+$volUp exec amixer -q sset Master 100%
+#bindsym $mod+Shift+$volDown exec amixer -q sset Master 5%
+bindsym $mod+End exec systemctl suspend
+bindsym $mod+$mute exec amixer -q sset Master 0%
 
 #personal
 bindsym $mod+o exec $brow 
@@ -107,10 +113,10 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+#bindsym $mod+Shift+Left move left
+#bindsym $mod+Shift+Down move down
+#bindsym $mod+Shift+Up move up
+#bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
 bindsym $mod+shift+v split h
@@ -128,15 +134,17 @@ bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
+#bindsym $mod+Shift+space mode "floating"
+
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-#bindsym $mod+a focus parent
+bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+d focus child
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -172,7 +180,7 @@ bindsym $mod+Shift+r reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 #bindsym $mod+Shift+r restart
 # resize window (you can also use the mouse for that)
-mode "resize" {
+mode "resize+move" {
         # These bindings trigger as soon as you enter the resize mode
 
         # Pressing left will shrink the window’s width.
@@ -191,19 +199,62 @@ mode "resize" {
         bindsym Up resize shrink height 6 px or 6 ppt
         bindsym Right resize grow width 6 px or 6 ppt
 
+        # bind movement in resize mode
+        bindsym Shift+h move left
+        bindsym Shift+j move down
+        bindsym Shift+k move up
+        bindsym Shift+l move right
+
         # back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+        
 }
+
+mode "floating" {
+
+
+
+
+
+        bindsym Shift+$mod+h resize shrink width 6 px or 6 ppt
+        bindsym Shift+$mod+j resize grow height 6 px or 6 ppt
+        bindsym Shift+$mod+k resize shrink height 6 px or 6 ppt
+        bindsym Shift+$mod+l resize grow width 6 px or 6 ppt
+
+        bindsym Shift+Left resize shrink width 6 px or 6 ppt
+        bindsym Shift+Down resize grow height 6 px or 6 ppt
+        bindsym Shift+Up resize shrink height 6 px or 6 ppt
+        bindsym Shift+Right resize grow width 6 px or 6 ppt
+
+        bindsym Shift+h move left
+        bindsym Shift+j move down
+        bindsym Shift+k move up
+        bindsym Shift+l move right
+
+#        bindsym $mod+space mode "default" for_window [class="[.]*"] floating disable 
+
+        bindsym $mod+space mode "default"
+}
+
+
 
 bar {
+    
     status_command SCRIPT_DIR=/home/beppe/.config/i3blocks i3blocks -c ~/.config/i3blocks/config
     #status_command i3blocks -c ~/.config/i3blocks/config
-
+        colors {
+            background #989898
+            focused_workspace #000000 #00007F #ffffff
+            active_workspace #000000 #00007F #ffffff
+            inactive_workspace #002b36 #586e75 #002b36
+            urgent_workspace #d33682 #d33682 #fdf6e3
+        }
 }
 
 
-bindsym $mod+r mode "resize"
+bindsym $mod+r mode "resize+move"
 
 # Disable titlebar
 new_window pixel 1
@@ -224,24 +275,47 @@ popup_during_fullscreen smart
 focus_follows_mouse no
 
 bindsym $mod+p exec rofi -show run
-bindsym $mod+shift+p exec rofi -show window
+#bindsym $mod+shift+p exec rofi -show window
 #bindsym $mod+b exec polybar statusbar &
- 
+
+
+# playerctl settings
+
+bindsym $mod+Shift+Left exec playerctl previous
+bindsym $mod+Shift+Right exec playerctl next
+bindsym $mod+Shift+p exec playerctl play-pause
+
+
 bindsym $mod+shift+e exit
 
 #startupStuff
 #set polybar
 #exec polybar statusbar & 
-bindsym $mod+End exec termite -e htop
+#bindsym $mod+End exec termite -e htop
 bindsym $mod+Home exec ranger
 
 # Set Wallpaper
 exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper/wallpaper.*
 exec compton -CGb
+exec --no-startup-id clipit
+#exec xautolock -detectsleep -time 3 -locker "systemctl suspend"
+
+
+
 exec setxkbmap be -option caps:escape
 exec xmodmap -e "keycode 117 = Down"
 #exec xmodmap -e "keysym Caps_Lock = Escape"
 #
 #
 # startupScript for space 1
-exec ~/.startupScripts/space1
+#exec ~/.startupScripts/space1
+#
+#
+
+
+#experimental
+#
+#
+
+#float everything at the start
+
