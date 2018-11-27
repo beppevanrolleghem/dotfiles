@@ -37,7 +37,7 @@ set $term2 urxvt
 
 #browser
 #set $brow qutebrowser
-set $brow google-chrome-unstable
+set $brow firefox⁻developer-edition 
 # Keys bindings for easy access
 set $bright XF86MonBrightnessUp
 set $dim XF86MonBrightnessDown
@@ -86,8 +86,8 @@ bindsym $mod+End exec systemctl suspend
 bindsym $mod+$mute exec amixer -q sset Master 0%
 
 #personal
-bindsym $mod+o exec $brow 
-bindsym $mod+i exec $term1 -e vim
+#bindsym $mod+o exec $brow 
+#bindsym $mod+i exec $term1 -e vim
 bindsym $mod+Shift+f exec $term1 -e ranger
 
 # rofi with change window feature (like select window in tmux) 
@@ -159,8 +159,11 @@ bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 # cycle between workspace
-bindsym $mod+n workspace next
-bindsym $mod+shift+n workspace prev
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
+bindsym Alt+Tab focus next
+
+
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
@@ -216,7 +219,7 @@ mode "floating" {
 
 
 
-
+        
 
         bindsym Shift+$mod+h resize shrink width 6 px or 6 ppt
         bindsym Shift+$mod+j resize grow height 6 px or 6 ppt
@@ -262,7 +265,7 @@ new_float pixel 1
 
 # Gaps (i3-gaps)
 gaps inner 6
-gaps outer 6
+gaps outer 0
 
 # Window Border color
 client.focused              #ffffff #ffffff #000000 #c8395b 
@@ -316,6 +319,43 @@ exec xmodmap -e "keycode 117 = Down"
 #experimental
 #
 #
+
+#increase border, decrease border
+
+#bindsym $mod+Shift+b  
+#bindsym $mod+b
+
+
+#mode experiments
+#
+
+bindsym $mod+o mode "launcher"
+
+set $enableDef i3-msg mode default 
+mode "launcher" {
+    bindsym o exec firefox-developer-edition 
+    bindsym v exec vim    
+    bindsym e exec ranger 
+   
+    bindsym s mode "spotify or sublime"
+    bindsym Escape mode "default"
+    bindsym Return mode "default"
+    bindsym g mode "default"
+
+
+}
+
+mode "spotify or sublime"{
+    bindsym p exec spotify 
+    bindsym u exec subl3 
+    bindsym Escape mode "default"
+    bindsym Return mode "default"
+    bindsym s mode "launcher"
+}
+
+
+
+
 
 #float everything at the start
 
